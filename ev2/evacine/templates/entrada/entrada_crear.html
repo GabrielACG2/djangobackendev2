@@ -1,0 +1,11 @@
+{% extends "todo.html" %}
+{% block content %}
+    <h1>Crear Entrada</h1>
+        <form method="post">
+            {% csrf_token %}
+            {{ form.as_p }}
+            {{ form.Fecha|date:'Y-m-d' }}
+            {{ form.Hora|date:'Y-m-d\TH:i' }}
+            <button type="submit">Guardar Entrada</button>
+        </form>
+{% endblock %}

@@ -1,0 +1,13 @@
+{% extends "todo.html" %}
+{% block content %} 
+    <div>
+        <h1>Actualizar Entrada de Cine</h1>
+        <form method="post">
+            {% csrf_token %}
+            {{ form.as_p }}
+            {{ form.Fecha|date:'Y-m-d' }}
+            {{ form.Hora|date:'Y-m-d\TH:i' }}
+            <button type="submit">Guardar Cambios</button>
+        </form>
+    </div>
+{% endblock %}
